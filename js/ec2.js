@@ -23,8 +23,8 @@ function solve()
 		x2_im = Math.sqrt(-delta) / (2 * a);
 		
 	}
-	document.getElementById("id_x1").innerHTML = x1_re + " + " x1_im + "i";
-	document.getElementById("id_x2").innerHTML = x2_re + " + " x2_im + "i";
+	document.getElementById("id_x1").innerHTML = x1_re + " + " + x1_im + "i";
+	document.getElementById("id_x2").innerHTML = x2_re + " + " + x2_im + "i";
 	
 	
 
