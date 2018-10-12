@@ -18,7 +18,7 @@ function compute_delta(coef){
 
 
 
-function solve(coef)
+function solve2(coef)
 {
 		
 	
@@ -61,7 +61,7 @@ function print_solutions(solution)
 function solve()
 {
 var coef = read_data();
-var solution = solve(coef);
+var solution = solve2(coef);
 print_solutions(solution);
 	
 }
