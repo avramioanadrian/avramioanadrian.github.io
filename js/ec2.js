@@ -1,0 +1,1 @@
+document.getElementById("id_buisness_version").innerHTML ="Business version: 2018.10.12.0";
