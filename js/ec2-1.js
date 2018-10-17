@@ -1,4 +1,4 @@
-document.getElementById("id_buisness_version").innerHTML ="Business version: 2018.10.12.4";
+document.getElementById("id_buisness_version").innerHTML ="Business version: 2018.10.12.5";
 
 function read_data()
 {
@@ -12,7 +12,7 @@ function read_data()
 
 
 function compute_delta(coef){
-	return coelf.b * coef.b - 4 * coef.a * coef.c;
+	return coef.b * coef.b - 4 * coef.a * coef.c;
 	
 }
 
