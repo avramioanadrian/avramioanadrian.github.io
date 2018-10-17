@@ -1,4 +1,4 @@
-document.getElementById("id_buisness_version").innerHTML ="Business version: 2018.10.12.5";
+document.getElementById("id_buisness_version").innerHTML ="Business version: 2018.10.12.6";
 
 function read_data()
 {
@@ -51,8 +51,8 @@ function solve2(coef)
 
 function print_solutions(solution)
 {
-	document.getElementById("id_x1").innerHTML = solution.x1.x1_re + " + " + solution.x1.x1_im + "i";
-	document.getElementById("id_x2").innerHTML = solution.x2.x2_re + " + " + solution.x2.x2_im + "i";
+	document.getElementById("id_x1").innerHTML = solution.x1.re + " + " + solution.x1.im + "i";
+	document.getElementById("id_x2").innerHTML = solution.x2.re + " + " + solution.x2.im + "i";
 	
 }
 
