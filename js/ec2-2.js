@@ -21,7 +21,7 @@ function EC2(){
 	}
 	else{
 		this.x1 ={re:-coef.b / (2 * coef.a), im:- Math.sqrt(-delta) / (2 * coef.a)};
-		this.x2= {re:-coef.b / (2 * coef.a), im: Math.sqrt(-delta) / (2 * coef.a);
+		this.x2= {re:-coef.b / (2 * coef.a), im: Math.sqrt(-delta) / (2 * coef.a)};
 		
 	}
 	};
