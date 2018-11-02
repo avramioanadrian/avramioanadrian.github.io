@@ -16,12 +16,12 @@ function EC2(){
 	
 	if(delta >= 0){
 		this.x1 = {re:(-this.b - Math.sqrt(delta)) / (2 * this.a), im:0};
-		this.x2={re:(-this.b + Math.sqrt(delta)) / (2 * this.a), im:0};
+		this.x2 ={re:(-this.b + Math.sqrt(delta)) / (2 * this.a), im:0};
 		
 	}
 	else{
 		this.x1 ={re:-this.b / (2 * this.a), im:- Math.sqrt(-delta) / (2 * this.a)};
-		this.x2= {re:-this.b / (2 * this.a), im: Math.sqrt(-delta) / (2 * this.a)};
+		this.x2 ={re:-this.b / (2 * this.a), im: Math.sqrt(-delta) / (2 * this.a)};
 		
 	}
 	};
