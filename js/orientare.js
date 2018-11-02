@@ -1,4 +1,4 @@
-document.getElementById("id_business_version").innerHTML = "Bussiness version: 2018.11.02 - 03";
+document.getElementById("id_business_version").innerHTML = "Bussiness version: 2018.11.02 - 04";
 window.addEventListener("deviceorientation", on_device_orinetation);
 
 function on_device_orinetation(e){
@@ -8,6 +8,7 @@ function on_device_orinetation(e){
 	
 	var canvas = document.getElementById('id_canvas');
 	var context = canvas.getContext('2d');
+	var R = 10;
 	context.biginPath();
 	context.arc(canvas.width/2 + e.beta/90 * (canvas.width/2 - R),
 	canvas.width/2 + e.gamma/90 * (canvas.width/2 - R),
