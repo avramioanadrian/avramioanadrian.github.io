@@ -1,4 +1,4 @@
-document.getElementById("id_business_version").innerHTML = "Bussiness version: 2018.11.02 - 05";
+document.getElementById("id_business_version").innerHTML = "Bussiness version: 2018.11.02 - 06";
 window.addEventListener("deviceorientation", on_device_orinetation);
 window.addEventListener("devicemotion", on_device_motion);
 
@@ -24,4 +24,8 @@ function on_device_motion(e){
 	document.getElementById("id_acc_x").innerHTML = e.accelerationIncludingGravity.x;
 	document.getElementById("id_acc_y").innerHTML = e.accelerationIncludingGravity.y;
 	document.getElementById("id_acc_z").innerHTML = e.accelerationIncludingGravity.z;
+	
+		document.getElementById("id_rot_x").innerHTML = Math.atan(e.accelerationIncludingGravity.x / e.accelerationIncludingGravity.z);
+		document.getElementById("id_rot_y").innerHTML = Math.atan(e.accelerationIncludingGravity.y / e.accelerationIncludingGravity.z);
+
 }
