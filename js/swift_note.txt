@@ -1,0 +1,151 @@
+import Foundation
+
+class t_note_student{
+    var note: [String: Int]
+    
+    init(){
+     note = [:]   
+    }
+    
+    init(_ materie: String, _ nota: Int){
+        note = [materie: nota]
+    }
+    
+    deinit{
+        note = [:]
+    }
+    
+    func add_update(_ materie: String, _ nota: Int){
+        note[materie] = nota
+    }
+    
+    func sterge(_ materie: String){
+        note[materie] = nil
+    }
+    
+    func tipareste(){
+        print("Note=")
+        for(materie, nota) in note{
+        print("La matreria \(materie) nota este \(nota)")
+        }
+      
+    }
+    
+    func tipareste_restante(){
+        print("Note=")
+        for(materie, nota) in note{
+            if(nota < 5){
+            print("La matreria \(materie) nota este \(nota)")
+            }
+        }
+    }
+    
+    func gaseste_nota(_ materie: String) ->Int{
+        let nota_opt = note[materie]
+        if let  nota = nota_opt{
+            return nota
+        }else{
+            return -1
+        }
+    }
+    
+    subscript(index : String) ->Int{
+    get{
+       return gaseste_nota(index)
+    }
+    
+    set(nota){
+    note[index] = nota
+        
+    }
+        
+    }
+    
+    func get_media() ->Float{
+    var media = Float(0.0)
+    for(nota) in note.values{
+        media += Float(nota)
+    }
+    media /= Float(note.count)
+    return media
+        
+    }
+} //End class
+
+
+enum t_test{
+    case constructor_implicit
+    case constructor_parametric
+    case restante
+    case sterge
+    case gaseste_exista
+    case gaseste_nu_exista
+    case supra_incarcare_subscript
+    case media
+}
+
+let test_case = t_test.media
+
+switch(test_case){
+    case .constructor_implicit:
+        let x = t_note_student()
+        x.add_update("Citire", 5)
+        x.add_update("Matematica", 9)
+        x.tipareste() 
+        
+    case .constructor_parametric:
+        let x = t_note_student("Caligrafie", 4)
+        x.add_update("Citire", 5)
+        x.add_update("Matematica", 9)
+        x.tipareste() 
+    
+    case .restante:
+        let x = t_note_student("Caligrafie", 4)
+        x.add_update("Citire", 5)
+        x.add_update("Matematica", 9)
+        x.tipareste_restante()
+        
+    case .sterge:
+        let x = t_note_student("Caligrafie", 4)
+        x.add_update("Citire", 5)
+        x.add_update("Matematica", 9)
+        x.tipareste_restante() 
+        x.sterge("Citire")
+        
+    case .gaseste_exista:
+        let x = t_note_student("Caligrafie", 4)
+        x.add_update("Citire", 5)
+        x.add_update("Matematica", 9)
+        let materie = "Citire"
+        let nota =  x.gaseste_nota(materie) 
+        if(nota != -1){
+            print("La matreria \(materie) nota este \(nota)")
+        }else{
+             print("Nu avem nota la materia :  \(materie)")
+        }
+        
+    case .gaseste_nu_exista:
+        let x = t_note_student("Caligrafie", 4)
+        x.add_update("Citire", 5)
+        x.add_update("Matematica", 9)
+        let materie = "Istorie"
+        let nota =  x.gaseste_nota(materie) 
+        if(nota != -1){
+            print("La matreria \(materie) nota este \(nota)")
+        }else{
+             print("Nu avem nota la materia :  \(materie)")
+        }
+        
+    case .supra_incarcare_subscript:
+        let x = t_note_student("Caligrafie", 4)
+        x["Citire"] = 5
+        x.tipareste()
+        
+    case .media:
+        let x = t_note_student("Caligrafie", 4)
+        x.add_update("Citire", 5)
+        x.add_update("Matematica", 9)
+        let m = x.get_media()
+        print("Media este :  \(m)")
+
+}
