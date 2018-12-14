@@ -9,7 +9,7 @@ function on_touch_start(e){
 	
 	for(var i = 0 ; i< touches.length; i++){
 
-		context.beginPage();
+		context.beginPath();
 		context.arc(touches[i].pageX, touches[i].pageY, 20 , 0 , 2*Math.PI);
 		context.stroke();
 		
