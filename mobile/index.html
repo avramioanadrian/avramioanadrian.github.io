@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Camera</title>
+	</head>
+	<body>
+		<video id = "video" width="100" height="100"><br>
+		<canvas id="canvas"></canvas><br>
+		<button onclick="takeFoto();"> Yake Foto</button>
+	
+	</body>
+	<script text="text/javascript">
+	var video = document.getElementById("video");
+	var canvas = document.getElementById("canvas");
+	var context = canvas.getContext("2d");
+	
+	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.0GetUserMedia|| navigator.msGetUserMedia
+	
+	if(navigator.getUserMedia){
+	navigator.getUserMedia({video:true}, webCam, webError);
+	}
+	
+	function webCam(stream){
+	video.src = window.URL.createObjectURL(stream);
+	video.play();
+
+	}
+	
+	function webError(error){
+	alert(error.name);
+
+	}
+	
+		function takeFoto(){
+canvas.width = 100;
+canvas.height = 100;
+context.drowImage(video,0, 0)
+
+	}
+	
+	
+	</script>
+
+
+
+
+
+</html>
