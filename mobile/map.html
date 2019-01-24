@@ -20,7 +20,11 @@
 		}
   
   function showPosition(position) {
-  document.getElementById("google_maps").setAttribute("src", "https://embed.waze.com/iframe?zoom=12&lat="+position.coords.latitude+"&lon="+position.coords.longitude+"" );
+  var lat=position.coords.latitude;
+  var log=position.coords.longitude;
+  var url = "https://embed.waze.com/iframe?zoom=12&lat="+lat+"&lon="+log"";
+  
+  document.getElementById("google_maps").setAttribute("src", url);
 
 }
 
