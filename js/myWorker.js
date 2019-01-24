@@ -6,16 +6,13 @@ this.onmessage = function(e){
 	
 	
 }
+function fibonacci(number) {
 
-function fibonacci(num){
-  var a = 1, b = 0, temp;
+	if (number < 1)
+		return 0;
 
-  while (num >= 0){
-    temp = a;
-    a = a + b;
-    b = temp;
-    num--;
-  }
+	if (number <= 2)
+		return 1;
 
-  return b;
+   return fibonacci(number - 1) + fibonacci(number - 2);
 }

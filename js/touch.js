@@ -5,7 +5,7 @@ function fib() {
  		if(myWorker == null){
 		
 		myWorker = new Worker('myWorker.js');
-		myWorker.postMessage(100);
+		myWorker.postMessage(5);
 		
 		
 		myWorker.onmessage = function (e){
