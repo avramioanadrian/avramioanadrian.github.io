@@ -5,7 +5,8 @@ function fib() {
  		if(myWorker == null){
 		
 		myWorker = new Worker('myWorker.js');
-		myWorker.postMessage(number);
+		myWorker.postMessage(100);
+		
 		
 		myWorker.onmessage = function (e){
 			demo.innerHTML = 'Fibonacci:' + number+'is'+e.data;
