@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Map</title>
+	
+	</head>
+	<body>
+	<div id="maps">
+	<iframe id="google_maps" src="https://embed.waze.com/iframe?zoom=12&lat=45.6906304&lon=-120.810983" width="300" height="400"></iframe>
+	
+	</div>
+
+	</body>
+	<script text="text/javascript">
+	function initMap(){
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		} else {
+			console
+		}
+  
+  function showPosition(position) {
+  document.getElementById("google_map").setAttribute("src", "https://embed.waze.com/iframe?zoom=12&lat="+position.coords.latitude+"&lon="+position.coords.longitude+"" )
+
+}
+
+}
+
+	</script>
+</html>
