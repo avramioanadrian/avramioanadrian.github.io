@@ -14,7 +14,7 @@
 	var canvas = document.getElementById("canvas");
 	var context = canvas.getContext("2d");
 	
-	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.0GetUserMedia|| navigator.msGetUserMedia
+	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.oGetUserMedia|| navigator.msGetUserMedia
 	
 	if(navigator.getUserMedia){
 	navigator.getUserMedia({video:true}, webCam, webError);
