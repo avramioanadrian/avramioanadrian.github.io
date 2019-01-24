@@ -4,7 +4,8 @@ var statusdiv = document.getElementById('statusdiv');
 var fib = document.getElementById('fib');
 var count = 0;
 function on_touch_start(e){
-	count = count + 1;
+	
+		count = count + 1;
 
         statusdiv.innerHTML = 'Counter:' + count ;
         e.preventDefault();
@@ -12,7 +13,7 @@ function on_touch_start(e){
 		if(window.Worker){
 		
 		var myWorker = new Worker("worker.js");
-		myWorker.postMessage(count);
+		myWorker.postMessage(100);
 		
 		myWorker.onmessage = function (e){
 			fib.innerHTML = 'Fibonacci:' + count+'is'+e.data;
