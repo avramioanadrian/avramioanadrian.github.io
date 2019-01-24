@@ -5,6 +5,7 @@
 	
 	</head>
 	<body>
+	<a href="#" id="get_location"> Get Location </a>
 	<div id="maps">
 	<iframe id="google_maps" src="https://embed.waze.com/iframe?zoom=12&lat=45.6906304&lon=-120.810983" width="300" height="400"></iframe>
 	
@@ -12,22 +13,21 @@
 
 	</body>
 	<script text="text/javascript">
-	function initMap(){
-		if (navigator.geolocation) {
+	document.getElementById("google_maps").onclick = function(){
+	if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(showPosition);
 		} else {
 		
 		}
+	
+	return false;
 	}
+
   
   function showPosition(position) {
   var lat=position.coords.latitude;
-  console.log(lat);
   var log=position.coords.longitude;
-  console.log(log);
-  var url = "https://embed.waze.com/iframe?zoom=12&lat="+lat+"&lon="+log+"";
-  
-  document.getElementById("google_maps").setAttribute("src", url);
+  document.getElementById("google_maps").setAttribute("src", "https://embed.waze.com/iframe?zoom=12&lat="+lat+"&lon="+log+"";);
 
 }
 
