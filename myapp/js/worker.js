@@ -1,9 +1,9 @@
 this.onmessage = function(e){
-	if(e.data.count != undefined){
+	
 		var result = fibonacci(e.data.count);
 		this.postMessage(result);
 		
-	}
+	
 	
 };
 

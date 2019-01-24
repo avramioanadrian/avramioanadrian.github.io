@@ -9,18 +9,16 @@ function on_touch_start(e){
 
         statusdiv.innerHTML = 'Counter:' + count ;
         e.preventDefault();
-
-}
-
-function getFibo(){
-	if(window.Worker){
+		
+		if(window.Worker){
 		
 		var myWorker = new Worker("worker.js");
-		myWorker.postMessage(count);
+		myWorker.postMessage(count)
 		
 		myWorker.onmessage = function (e){
 			fib.innerHTML = 'Fibonacci:' + count+'is'+e.data.result ;
 	};
 	}
-
 }
+
+
