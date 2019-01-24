@@ -1,18 +1,18 @@
 this.onmessage = function(e){
 	
-		var result = fibonacci(e.data);
+		var result = numarPar(e.data);
 		this.postMessage(result);
 		
 	
 	
 }
 function fibonacci(number) {
+var result = '';
+	if (number % 2 == 0){
+		result = 'Par';
+	}else{
+		result = 'Impar';
+	}
+	return result;
 
-	if (number < 1)
-		return 0;
-
-	if (number <= 2)
-		return 1;
-
-   return fibonacci(number - 1) + fibonacci(number - 2);
 }

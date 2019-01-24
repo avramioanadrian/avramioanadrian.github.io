@@ -9,7 +9,16 @@ function fib() {
 		
 		
 		myWorker.onmessage = function (e){
-			demo.innerHTML = 'Fibonacci:' + number+'is'+e.data;
+			var res = e.data;
+			
+			if(res == 'Par'){
+				
+			demo.innerHTML = 'Numarul este:'+res;
+			
+			}else{
+				
+			demo.innerHTML = 'Numarul este:'+res;
+				
 	}
 	}
 }
