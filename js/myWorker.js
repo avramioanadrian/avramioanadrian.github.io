@@ -6,13 +6,12 @@ this.onmessage = function(e){
 	
 	
 }
-function fibonacci(number) {
-var result = '';
+function numarPar(number) {
+
 	if (number % 2 == 0){
-		result = 'Par';
+		return 0;
 	}else{
-		result = 'Impar';
+		return 1;
 	}
-	return result;
 
 }
