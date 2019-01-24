@@ -4,39 +4,24 @@
 		<title>Camera</title>
 	</head>
 	<body>
-		<video autoplay="true" id = "video" width="320" height="240"></video><br>
-		<canvas id="canvas"></canvas><br>
-		<button onclick="takeFoto()"> Take Foto</button>
+<video id="video" width="640" height="480" autoplay></video>
+<button id="snap">Snap Photo</button>
 	
 	</body>
 	<script text="text/javascript">
 	var video = document.getElementById("video");
-	var canvas = document.getElementById("canvas");
-	var context = canvas.getContext("2d");
-	
-	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.oGetUserMedia|| navigator.msGetUserMedia
-	
-	if(navigator.mediaDevices.getUserMedia){
-	navigator.mediaDevices.getUserMedia({video: true}, webCam, webError);
-	}
-	
-	function webCam(stream){
-video.srcObject = stream;
 
-
-	}
 	
-	function webError(error){
-console.log("Something went wrong!");
-
-	}
+if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    // Not adding `{ audio: true }` since we only want video now
+    navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+        //video.src = window.URL.createObjectURL(stream);
+        video.srcObject = stream;
+        video.play();
+    });
+}
 	
-		function takeFoto(){
-canvas.width = video.clientWidth;
-canvas.height = video.clienteHeight
-context.drowImage(video,0, 0)
 
-	}
 	
 	
 	</script>
