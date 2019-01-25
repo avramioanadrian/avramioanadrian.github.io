@@ -2,13 +2,30 @@
 <html>
 <title>Web Page Design</title>
 <head>
-
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 </head>
 <body>
-<input type="text" id="number"><br>
-<button id="calc" onclick="fib()">calcular</button>
-<p id="demo"></p>
+<input type="text" id="city"><br>
+<button onclick="myFunction()">Click me</button>
 
-<script src="touch.js"></script>
+
+<script type="text/javascript">
+function myFunction(){
+var apiCall='http://api.openweathermap.org/data/2.5/weather?q=Los Angeles&units=metric&appid=4958d89f553396c8856d8d504d251b95';
+
+
+	$.getJSON(apiCall,weather);
+	function weather(e){
+	document.getElementById('city').innerHTML='City Name:'+e.name;
+	document.getElementById('country').innerHTML ='Country Name'+e.sys.country;
+	document.getElementById('temperature').innerHTML ='Temperature'+ e.main.temp+'C';
+	document.getElementById('humidity').innerHTML = 'Humidity'+e.main.humidity+'%';
+
+	}
+}
+</script>
 </body>
 </html>

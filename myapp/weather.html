@@ -1,26 +1,52 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Aerial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-<body>
-<p>UI version:2018.10.12.0 </p>
-<p id = "id_buisness_version"> </p>
+	<head>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
-<input type="text" id = "id_a"/>
-<br>
-<input type="text" id = "id_b"/>
-<br>
-<input type="text" id = "id_c"/>
-<br>
+		<title>My App</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload" >
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
 
-<button type= "button" onclick="solve()">Solve</button>
+				<!-- Header -->
+					<header id="header">
+						<h1>Weather</h1>
+						<input id="city" type="text" value="City Name!"><br>
+						<button onclick='getWeather()'> Get Weather </button>
+							<h2 id="cityname">City Name</h2>
+							<h2 id="country">Country Name</h2>
+							<h2 id="temperature">Temperature</h2>
+							<h2 id="humidity">Humidity</h2>
+					</header>
 
-<p id="id_x1"></p>
-<p id="id_x2"></p>
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+					</footer>
 
-<script src = "ec2-2.js"> </script>
+			</div>
+		</div>
+		<script src="js/weather.js"></script>
+			<script>
 
-
-
-
-
-</body>
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+	</script>
+	</body>
 </html>

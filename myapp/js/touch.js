@@ -13,7 +13,7 @@ var count = 0;
 		
 		
 			var myWorker = new Worker("worker.js");
-			myWorker.postMessage(55);
+			myWorker.postMessage(count);
 		
 			myWorker.onmessage = function (e){
 				var res = e.data;
