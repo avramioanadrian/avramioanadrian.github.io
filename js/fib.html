@@ -14,15 +14,12 @@
 
 <script type="text/javascript">
 function myFunction(){
-var apiCall='http://api.openweathermap.org/data/2.5/weather?q=Los Angeles&units=metric&appid=4958d89f553396c8856d8d504d251b95';
+var apiCall='http://data.fixer.io/api/latest?access_key=01b22eb4ebea205f5d6dad1d80e4c1d7';
 
 
 	$.getJSON(apiCall,weather);
 	function weather(e){
-	document.getElementById('city').innerHTML='City Name:'+e.name;
-	document.getElementById('country').innerHTML ='Country Name'+e.sys.country;
-	document.getElementById('temperature').innerHTML ='Temperature'+ e.main.temp+'C';
-	document.getElementById('humidity').innerHTML = 'Humidity'+e.main.humidity+'%';
+console.log(e)
 
 	}
 }

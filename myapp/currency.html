@@ -6,13 +6,18 @@
 -->
 <html>
 	<head>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
 		<title>My App</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" >
 		<div id="wrapper">
 			<div id="bg"></div>
 			<div id="overlay"></div>
@@ -25,19 +30,27 @@
 								<li><a href="index.html" class="icon fa-home"><span class="label">Home</span></a></li>
 							</ul>
 						</nav>
-						<h1>Camera</h1>
-							<video id="video" autoplay></video>
-							<canvas id="canvas"></canvas><br>
-							<button id="snap">Take Photo</button>
+						<h1>Currency</h1>
+						<button onclick='getCurrency()'>Get Currency  </button>
+							<h2 id="usd">USD</h2>
+							<h2 id="eur">EUR</h2>
+							<h2 id="gbp">GBP</h2>
+							<h2 id="ron">RON</h2>
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
 					</footer>
 
 			</div>
 		</div>
-		<script src="js/camera.js"></script>
-		<script>
+		<script src="js/currency.js"></script>
+			<script>
+
 			window.onload = function() { document.body.classList.remove('is-preload'); }
 			window.ontouchmove = function() { return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
+	</script>
 	</body>
 </html>
