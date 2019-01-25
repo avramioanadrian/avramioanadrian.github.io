@@ -18,11 +18,11 @@ var count = 0;
 			myWorker.onmessage = function (e){
 				var res = e.data;
 					if(res == 0){
-						par.innerHTML = 'Numarul '+ number +' este Par!!';
+						par.innerHTML = 'Numarul '+ count +' este Par!!';
 					}else{
-						par.innerHTML = 'Numarul '+ number +' este Impar!';
+						par.innerHTML = 'Numarul '+ count +' este Impar!';
 					}
-		}
+			}
 	}
 
 
