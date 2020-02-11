@@ -32,9 +32,9 @@ main{
     transform: rotate(30deg);
     position: absolute;
     margin: 20px;
-    top: 20px;
+    top: 40px;
     right:10px;
-    font-size: 12px;
+    font-size: 20px;
     color: white;
     background:#ff1b68;
     padding:8px;
