@@ -4,6 +4,7 @@
 body{
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
+    background-color: rgba(213,255,220,0.95)
 }
 .testimonial {
     font-size: 20px;
@@ -28,12 +29,12 @@ body{
   }
   .testimonial__image{
     width: 100%;
-    border-radius: 10px;
+    border-radius:50%;
   }
   
   .testimonial__info {
     text-align: right;
-    padding: 14px;
+    padding: 0 15px;
     display: inline-block;
     vertical-align: middle;
     width: 40%;
